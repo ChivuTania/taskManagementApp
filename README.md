@@ -38,19 +38,18 @@ In order to implement all the functionalities, these REST API methods will be us
   - GET/sprint/{id} - to retrieve a specific sprint by id
   - GET/task - to retrieve a list of all tasks
   - GET/task/{id} - to retrieve a specific task by id
-  
+
 2. POST METHOD
   - POST/project - to add new project using DTOs
   - POST/sprint - to add a new sprint using DTOs
   - POST/task - to add a new sale using DTOs
+    
 3. PATCH METHOD
-  - PATCH/project/member - to update an existing project's member
-  - PATCH/project/{id}/sprint - to update an existing sprint in a specific project
-  - PATCH/sprint/{id}/task - to update an existing sprint information
-  - PATCH/sprint/{id} - to update an existing sprint with all the modified info (to be also updated in Project)
-  - PATCH/task/owner - to update the owner of an existing task
-  - PATCH/task/state - to update the state of an existing task
-  - PATCH/task/{id} - to update an existing task with all the modified info (to be also updated in Sprints)
+  - PATCH/project/{id} - to update an existing project (update the Sprints and Tasks that are modified in that project)
+  - PATCH/sprint/{id} - to update an existing sprint (update the Tasks that are modified in that Sprint)
+  - PATCH/task/{id}/owner - to update the owner of an existing task
+  - PATCH/task/{id}/state - to update the state of an existing task
+  - PATCH/task/{id} - to update an existing task with all the modified info 
     
 4. DELETE METHOD
   - DELETE/project/{id} - to delete a project by ID
