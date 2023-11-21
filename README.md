@@ -4,7 +4,7 @@
 # OVERVIEW
 The chosen theme for this project is a Project Management Application where team members 
 can sort out their tasks, create new issues and track their progress. It will mimic some of the behaviors of other 
-well-known management platforms such as Jira and it will follow a structure of Projects, Sprints and finally tasks. Its desired main functionalities would be:
+well-known management platforms such as Jira and it will follow a structure of Projects, Sprints and finally Tasks. Its desired main functionalities would be:
 - Create new Projects
 - Create new Sprints
 - Add Sprints to Projects
@@ -30,8 +30,7 @@ The hierarchical relationship can be represented as follows:
 - A Sprint can have multiple Tasks.
 - Each Task belongs to a specific Sprint.
 
-
-These functionalities that the application will provide will be made using: 
+In order to implement all the functionalities, these REST API methods will be used: 
 1. GET METHOD
   - GET/project - to retrieve a list of all projects
   - GET/project/{id} - to retrieve a specific project by id
