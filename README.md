@@ -16,8 +16,7 @@ well-known management platforms such as Jira and it will follow a structure of P
 # TECHNOLOGIES TO BE USED 
 This App will be designed using:
 - Spring: for the backend
-- AngularJS: for the frontend
-- MongoDB: for the database
+- Angular: for the frontend
 - Elasticsearch
 
 # DESIGNING REST API
@@ -32,26 +31,26 @@ The hierarchical relationship can be represented as follows:
 
 In order to implement all the functionalities, these REST API methods will be used: 
 1. GET METHOD
-  - GET/project - to retrieve a list of all projects
-  - GET/project/{id} - to retrieve a specific project by id
-  - GET/sprint - to retrieve a list of all sprints
-  - GET/sprint/{id} - to retrieve a specific sprint by id
-  - GET/task - to retrieve a list of all tasks
-  - GET/task/{id} - to retrieve a specific task by id
+  - GET/projects - to retrieve a list of all projects
+  - GET/projects/{id} - to retrieve a specific project by id
+  - GET/sprints - to retrieve a list of all sprints
+  - GET/sprints/{id} - to retrieve a specific sprint by id
+  - GET/tasks - to retrieve a list of all tasks
+  - GET/tasks/{id} - to retrieve a specific task by id
 
 2. POST METHOD
-  - POST/project - to add new project using DTOs
-  - POST/sprint - to add a new sprint using DTOs
-  - POST/task - to add a new sale using DTOs
+  - POST/projects - to add new project using DTOs
+  - POST/sprints - to add a new sprint using DTOs
+  - POST/tasks - to add a new sale using DTOs
     
 3. PATCH METHOD
-  - PATCH/project/{id} - to update an existing project (update the Sprints and Tasks that are modified in that project)
-  - PATCH/sprint/{id} - to update an existing sprint (update the Tasks that are modified in that Sprint)
-  - PATCH/task/{id}/owner - to update the owner of an existing task
-  - PATCH/task/{id}/state - to update the state of an existing task
-  - PATCH/task/{id} - to update an existing task with all the modified info 
+  - PATCH/projects/{id} - to update an existing project (update the Sprints and Tasks that are modified in that project)
+  - PATCH/sprints/{id} - to update an existing sprint (update the Tasks that are modified in that Sprint)
+  - PATCH/tasks/{id}/owner - to update the owner of an existing task
+  - PATCH/tasks/{id}/state - to update the state of an existing task
+  - PATCH/tasks/{id} - to update an existing task with all the modified info 
     
 4. DELETE METHOD
-  - DELETE/project/{id} - to delete a project by ID
-  - DELETE/sprint/{id} - to delete a sprint by ID
-  - DELETE/task/{id} - to delete a task by ID
+  - DELETE/projects/{id} - to delete a project by ID
+  - DELETE/sprints/{id} - to delete a sprint by ID
+  - DELETE/tasks/{id} - to delete a task by ID
