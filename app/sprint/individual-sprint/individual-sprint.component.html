@@ -1,0 +1,128 @@
+<div class="container1">
+    <div class="wrapper">
+        <div *ngFor="let sprint of [sprint];">
+            <p><strong style="color: rgb(85, 152, 228);">Sprint Name: </strong> {{sprint?.name}}</p>
+            <p><strong style="color: rgb(85, 152, 228);">Description: </strong> {{sprint?.description}}</p>
+
+            <div class="add">
+                <h3>Create new task</h3>
+                <button type="button" class="btn btn-outline-info btn-circle" (click) = "openCreateEditModal()">+</button>
+            </div>
+
+            <div class="container" >
+                <div class="box">
+                    <p>TO DO</p>
+                    <div *ngFor="let task of sprint?.tasks;">
+                        <a (click) = "openModal(task)">
+                            <div class="task" *ngIf = "task.state === 'TO DO'">
+                                <div class="name">
+                                    <p>{{task?.name}}</p>
+                                </div>
+                                
+                                <div class="bottom">
+                                    <div class="initials">
+                                        <p>{{ getInitial(task) }}</p>
+                                    </div>
+                    
+                                    <div class="deadline">
+                                        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                                            </svg> {{task?.deadline}}
+                                        </p>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="box">
+                    <p>IN PROGRESS</p>
+                    
+                        <div *ngFor="let task of sprint?.tasks;">
+                            <a (click) = "openModal(task)">
+                        <div class="task" *ngIf = "task.state === 'IN PROGRESS'">
+                            <div class="name">
+                                <p>{{task?.name}}</p>
+                            </div>
+                            
+                            <div class="bottom">
+                                <div class="initials">
+                                    <p>{{ getInitial(task) }}</p>
+                                </div>
+                
+                                <div class="deadline">
+                                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                                        </svg> {{task?.deadline}}
+                                    </p>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </a>
+                    </div>
+                
+                </div>
+                <div class="box">
+                    
+                    <p>IN REVIEW</p>
+                    <div *ngFor="let task of sprint?.tasks;">
+                        <a (click) = "openModal(task)">
+                        <div class="task" *ngIf = "task.state === 'IN REVIEW'">
+                            <div class="name">
+                                <p>{{task?.name}}</p>
+                            </div>
+                            
+                            <div class="bottom">
+                                <div class="initials">
+                                    <p>{{ getInitial(task) }}</p>
+                                </div>
+                
+                                <div class="deadline">
+                                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                                        </svg> {{task?.deadline}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                
+                </div>
+                <div class="box">
+                    
+                    <p>DONE</p>
+                    <div *ngFor="let task of sprint?.tasks;">
+                        <a (click) = "openModal(task)">
+                        <div class="task" *ngIf = "task.state === 'DONE'">
+                            <div class="name">
+                                <p>{{task?.name}}</p>
+                            </div>
+                            
+                            <div class="bottom">
+                                <div class="initials">
+                                    <p>{{ getInitial(task) }}</p>
+                                </div>
+                
+                                <div class="deadline">
+                                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                                        </svg> {{task?.deadline}}
+                                    </p>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </a>
+                    </div>
+             
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>

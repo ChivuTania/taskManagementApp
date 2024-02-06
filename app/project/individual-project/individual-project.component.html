@@ -1,0 +1,71 @@
+<div class="container1">
+    <div class="wrapper">
+
+        <br>
+        <br>
+
+        <div  *ngFor="let project of [project];">
+
+          <p><strong style="color: rgb(85, 152, 228);">Project Name: </strong> {{project?.name}}</p>
+          <p><strong style="color: rgb(85, 152, 228);">Description: </strong> {{project?.description}}</p>
+         
+            <br>
+            <br>
+
+            <div class="add">
+                <h3>Create new sprint</h3>
+                <button type="button" class="btn btn-outline-info btn-circle" (click) = "openCreateEditModal()">+</button>
+            </div>
+
+            <br>
+            <br>
+            
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th>Sprint Name</th>
+                    <th>Sprint Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let sprint of project?.sprints;">
+                    <td><a href="sprint/{{sprint?.id}}">{{ sprint?.name }}</a></td>
+                    <td>{{ sprint?.description }}</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            <p>{{project?.members}}</p>
+        </div>
+
+        <!-- <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Sprint</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td *ngFor="let sprint of project?.sprints;">Mark</td>
+                <td >
+                    <p><a href="sprint/{{sprint?.id}}"> {{sprint?.name}}</a></p>
+                </td>
+                
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table> -->
+    </div>
+</div>

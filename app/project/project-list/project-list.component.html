@@ -1,0 +1,38 @@
+<!-- <div class="container">
+    <h2>Create new project</h2>
+    <button type="button" class="btn btn-outline-info btn-circle" (click) = "openCreateEditModal()">+</button>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h2>Existing projects</h2>
+    <br>
+    <div *ngFor = "let project of allProjects">
+        <p><a href="/project/{{project.id}}">{{project.name}}</a></p>
+        <p>{{project.description}}</p>
+        
+        <br>
+    </div>
+
+</div> -->
+
+<div class="container">
+    <div class="left-section">
+      <div class="center-section">
+        <h2>Create a Project</h2>
+        <br>
+      <button type="button" class="btn btn-outline-info" (click)="openCreateEditModal()">Create</button>
+      </div>
+      
+    </div>
+    <div class="right-section">
+      <h2>Existing Projects</h2>
+      <br>
+      <div *ngFor="let project of allProjects" class="project-item">
+        <p><a href="/project/{{project.id}}" class="project-link">{{project.name}}</a></p>
+        <p>{{project.description}}</p>
+      </div>
+    </div>
+  </div>
+  

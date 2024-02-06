@@ -1,0 +1,30 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Create new task</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+    <form [formGroup]="createTaskForm" (submit)="onSubmit()">
+        <div>
+            <label for="name" class="form-label">Task Name: </label>
+            <input id="name" class="form-control" type="text" placeholder="TaskName" formControlName="taskNameControl" />
+        </div>
+    
+        <div>
+            <label for="description" class="form-label">Description: </label>
+            <input id="description" class="form-control" type="text" placeholder="Description" formControlName="descriptionControl">
+        </div>
+
+        <div>
+            <label for="owner" class="form-label">Owner: </label>
+            <input id="owner" class="form-control" type="text" placeholder="Owner" formControlName="ownerControl">
+        </div>
+
+        <div>
+            <label for="deadline" class="form-label">Deadline: </label>
+            <input id="deadline" class="form-control" type="text" placeholder="Deadline" formControlName="deadlineControl">
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="submit" class="btn btn-outline-success" (click) = "onSubmit()">Save</button>
+</div>

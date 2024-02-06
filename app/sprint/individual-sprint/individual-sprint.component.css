@@ -1,0 +1,75 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .box {
+    display: inline-block;
+    width: 24%;
+    height: 1000px;
+    background-color: #ccc;
+    margin: 10px;
+    overflow: auto;
+    align-items: center;
+    border-radius: 10px;
+  }
+
+  .task{
+    background-color: white;
+    margin-left: 0.75vw;
+    min-height: 15vh;
+    border-radius: 10px;
+    width: 14vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vh;
+  }
+
+  .name{
+    width: fit-content;
+    height: fit-content;
+    max-width: 100%;
+    margin-top: 2vh;
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+
+  .deadline{
+    position: inherit;
+    margin-left: 5vw;
+  }
+
+  .initials{
+    position: relative;
+    background-color: aqua;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    align-items: center;
+  }
+
+  .initials p{
+    text-align: center;
+  }
+
+  a:hover {
+    cursor:pointer;
+   }
+
+
+  .btn:hover {
+    background-color: #336699;
+    color: #fff;
+  }
+  
